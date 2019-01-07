@@ -7,11 +7,25 @@ import org.junit.jupiter.api.Test;
 class GildedRoseTest {
 
     @Test
-    void foo() {
-        Item[] items = new Item[] { new Item("foo", 0, 0) };
+    void VerifyIfQualityIsRight() {
+        Item[] items = new Item[] { new Item("foo", 2, 11) };
         GildedRose app = new GildedRose(items);
         app.updateQuality();
-        assertThat(app.items[0].name).isEqualTo("fixme");
+        assertThat(app.items[0].quality).isEqualTo(10);
+    }
+    @Test
+    void VerifyIfQualityOfConjuredItemIsRight() {
+        Item[] items = new Item[] { new Item("Conjured foo", 2, 11) };
+        GildedRose app = new GildedRose(items);
+        app.updateQuality();
+        assertThat(app.items[0].quality).isEqualTo(9);
     }
 
+    @Test
+    void VerifyIfQualityOfAgedBrieIsRight() {
+        Item[] items = new Item[] { new Item("Aged Brie", -2, 11) };
+        GildedRose app = new GildedRose(items);
+        app.updateQuality();
+        assertThat(app.items[0].quality).isEqualTo(13);
+    }
 }
