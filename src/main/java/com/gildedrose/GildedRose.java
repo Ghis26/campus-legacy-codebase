@@ -44,12 +44,12 @@ public class GildedRose {
                     //Update quality of passes
                     item.quality = passesQuality(item);
                 }
-                logger.info("Update complete.");
             } catch (Exception e) {
                 logger.debug("error on item " + item.name + ", sellIn : " + item.sellIn + " quality :" + item.quality +
                         "with error : " + e);
             }
         }
+        logger.info("Update complete.");
     }
 
     public Item[] getItems() {
