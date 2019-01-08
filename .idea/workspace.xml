@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="8552afae-f1ff-44e4-865f-f1e0f590794a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/src/main/java/com/gildedrose/GildedRose.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gildedrose/GildedRose.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/gildedrose/GildedRoseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/gildedrose/GildedRoseTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -57,7 +56,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/com/gildedrose/GildedRose.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="218">
-              <caret line="52" column="30" selection-start-line="52" selection-start-column="30" selection-end-line="52" selection-end-column="30" />
+              <caret line="52" column="9" selection-start-line="52" selection-start-column="9" selection-end-line="52" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#158#159#0" expanded="true" />
@@ -211,7 +210,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1546962610838" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1546962885631" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="preferences.sourceCode" />
@@ -333,7 +332,7 @@
       <updated>1546850631410</updated>
       <workItem from="1546850634151" duration="20276000" />
       <workItem from="1546886602319" duration="658000" />
-      <workItem from="1546934452016" duration="22722000" />
+      <workItem from="1546934452016" duration="22969000" />
     </task>
     <servers />
   </component>
@@ -370,7 +369,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="43656000" />
+    <option name="totallyTimeSpent" value="43903000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="878" extended-state="6" />
@@ -458,7 +457,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/com/gildedrose/GildedRose.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="218">
-          <caret line="52" column="30" selection-start-line="52" selection-start-column="30" selection-end-line="52" selection-end-column="30" />
+          <caret line="52" column="9" selection-start-line="52" selection-start-column="9" selection-end-line="52" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#158#159#0" expanded="true" />

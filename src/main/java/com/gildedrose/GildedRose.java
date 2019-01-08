@@ -48,9 +48,9 @@ public class GildedRose {
     private int noSpecificItems(Item item) {
         if (item.sellIn >= 0) {
             return item.quality = positiveSellIn(item);
-        } else if (item.sellIn < 0) {
+        } else {
             return item.quality = negativeSellIn(item);
-        } return item.quality;
+        }
     }
 
     //Method when the item sell in is positive
@@ -66,7 +66,7 @@ public class GildedRose {
     private int negativeSellIn(Item item) {
         if (item.quality > 1) {
             return item.quality = item.quality - 2;
-        } else {
+        } else{
             return item.quality;
         }
     }
