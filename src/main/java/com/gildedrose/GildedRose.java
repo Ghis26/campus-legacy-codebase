@@ -27,13 +27,11 @@ public class GildedRose {
     private int generalMethod(Item item) {
         if (item.quality >= 0 && item.quality <= 50) {
             if (!item.name.contains("Sulfuras")) {
-                item.sellIn--;
-            }
+                item.sellIn--;}
             if (item.specific) {
                 return item.quality = specificItems(item);
             } else {
-                return item.quality = noSpecificItems(item);
-            }
+                return item.quality = noSpecificItems(item);}
         }
         return item.quality;
     }
