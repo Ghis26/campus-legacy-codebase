@@ -25,29 +25,24 @@ public class GildedRose {
                 // quality if sell in > 0
                 if (item.sellIn >= 0) {
                     item.quality = positiveSellIn(item);
-                    catchException(item, logger);
                 } else {
                     // quality if sell in < 0
                     item.quality = negativeSellIn(item);
-                    catchException(item, logger);
                 }
 
                 // Update quality of Brie
                 item.quality = agedBrieQuality(item);
-                catchException(item, logger);
 
                 //Set quality of Sulfuras
                 item.quality = sulfurasQuality(item);
-                catchException(item, logger);
 
                 //Update Quality of conjured items
                 item.quality = conjuredQuality(item);
-                catchException(item, logger);
 
                 //Update quality of passes
                 item.quality = passesQuality(item);
-                catchException(item, logger);
             }
+            catchException(item, logger);
         }
     }
 
@@ -131,6 +126,6 @@ public class GildedRose {
     }
 
     private void catchException(Item item, Logger logger) {
-        logger.info("item " + item.name + ", sellIn : " + item.sellIn + " quality :" + item.quality+" complete");
+        logger.info("item " + item.name + ", sellIn : " + item.sellIn + " quality :" + item.quality + " complete");
     }
 }
