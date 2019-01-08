@@ -75,10 +75,14 @@ public class GildedRose {
         if (item.name.equals("Aged Brie")) {
             if (item.sellIn >= 0) {
                 return item.quality = item.quality + 1;
-            } if (item.sellIn < 0){
-                return item.quality = item.quality + 2;
             }
-        } return item.quality;
+            if (item.sellIn < 0) {
+                return item.quality = item.quality + 2;
+            } else {
+                return item.quality;
+            }
+        }
+        return item.quality;
     }
 
     // Method which update conjured item quality
