@@ -42,6 +42,7 @@ public class GildedRose {
                 //Update quality of passes
                 item.quality = passesQuality(item);
             }
+            correctionQuality(item);
             catchException(item, logger);
         }
     }
@@ -79,9 +80,6 @@ public class GildedRose {
                 return item.quality + 2;
             }
         }
-        if (item.name.equals("Aged Brie") && item.quality > 50) {
-            return item.quality = 50;
-        }
         return item.quality;
     }
 
@@ -93,9 +91,6 @@ public class GildedRose {
             }
             if (item.sellIn < 0) {
                 return item.quality = item.quality - 4;
-            }
-            if (item.quality < 0) {
-                return item.quality = 0;
             }
         }
         if (item.name.contains("Conjured") && item.quality == 1) {
@@ -143,5 +138,15 @@ public class GildedRose {
         } else {
             logger.info("item " + item.name + ", sellIn : " + item.sellIn + " quality :" + item.quality + " is ok.");
         }
+    }
+
+    private int correctionQuality(Item item) {
+        if (item.quality < 0) {
+            return item.quality = 0;
+        }
+        if (item.quality > 50 && !item.name.contains("Sulfuras")) {
+            return item.quality = 50;
+        }
+        return item.quality;
     }
 }
