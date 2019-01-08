@@ -8,10 +8,10 @@ class GildedRoseTest {
 
     @Test
     void VerifyIfQualityIsRight() {
-        Item[] items = new Item[] { new Item("foo", 2, 11) };
+        Item[] items = new Item[] { new Item("foo", -2, 11) };
         GildedRose app = new GildedRose(items);
         app.updateQuality();
-        assertThat(app.items[0].quality).isEqualTo(10);
+        assertThat(app.items[0].quality).isEqualTo(9);
     }
     @Test
     void VerifyIfQualityOfConjuredItemIsRight() {
