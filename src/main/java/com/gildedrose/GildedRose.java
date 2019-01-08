@@ -102,8 +102,8 @@ public class GildedRose {
     // Method which update passes quality
     private int passesQuality(Item item) {
         if (item.name.contains("Backstage passes")) {
-            if (item.sellIn < 11 && item.sellIn >= 0) {
-                if (item.sellIn > 6 && item.quality <= 48) {
+            if (item.sellIn < 11) {
+                if (item.sellIn >= 6 && item.quality <= 48) {
                     return item.quality = item.quality + 2;
                 }
                 if (item.sellIn < 6 && item.quality <= 47) {
