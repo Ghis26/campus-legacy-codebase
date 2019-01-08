@@ -79,6 +79,9 @@ public class GildedRose {
                 return item.quality + 2;
             }
         }
+        if (item.name.equals("Aged Brie") && item.quality > 50) {
+            return item.quality = 50;
+        }
         return item.quality;
     }
 
