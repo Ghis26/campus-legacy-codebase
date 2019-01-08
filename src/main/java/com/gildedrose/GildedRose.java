@@ -41,7 +41,7 @@ public class GildedRose {
 
                 //Update quality of passes
                 item.quality = passesQuality(item);
-            }
+            } catchException(item, logger);
         }
     }
 
@@ -82,9 +82,9 @@ public class GildedRose {
     // Method which update conjured item quality
     private int conjuredQuality(Item item) {
         if (item.name.contains("Conjured")) {
-            if (item.sellIn >= 0 && item.quality >1) {
+            if (item.sellIn >= 0 && item.quality > 1) {
                 return item.quality = item.quality - 2;
-            } if (item.sellIn <0 && item.quality >3 ) {
+            } if (item.sellIn <0 && item.quality > 3 ) {
                 return item.quality = item.quality - 4;
             }else {
                 return item.quality = 0;
