@@ -41,7 +41,8 @@ public class GildedRose {
 
                 //Update quality of passes
                 item.quality = passesQuality(item);
-            } catchException(item, logger);
+            }
+            catchException(item, logger);
         }
     }
 
@@ -52,7 +53,7 @@ public class GildedRose {
     //General method when the item sell in is positive
     private int positiveSellIn(Item item) {
         if (!item.name.contains("Backstage passes") && !item.name.equals("Sulfuras, Hand of Ragnaros")
-                && !item.name.contains("Conjured") && !item.name.equals("Aged Brie") && item.quality >0) {
+                && !item.name.contains("Conjured") && !item.name.equals("Aged Brie") && item.quality > 0) {
             return item.quality = item.quality - 1;
         }
         return item.quality;
@@ -61,7 +62,7 @@ public class GildedRose {
     //General method when the item sell in is negative
     private int negativeSellIn(Item item) {
         if (!item.name.contains("Backstage passes") && !item.name.equals("Sulfuras, Hand of Ragnaros")
-                && !item.name.contains("Conjured") && !item.name.equals("Aged Brie")&& item.quality >1) {
+                && !item.name.contains("Conjured") && !item.name.equals("Aged Brie") && item.quality > 1) {
             return item.quality = item.quality - 2;
         }
         return item.quality;
@@ -84,9 +85,10 @@ public class GildedRose {
         if (item.name.contains("Conjured")) {
             if (item.sellIn >= 0 && item.quality > 1) {
                 return item.quality = item.quality - 2;
-            } if (item.sellIn <0 && item.quality > 3 ) {
+            }
+            if (item.sellIn < 0 && item.quality > 3) {
                 return item.quality = item.quality - 4;
-            }else {
+            } else {
                 return item.quality = 0;
             }
         }
@@ -127,6 +129,13 @@ public class GildedRose {
     }
 
     private void catchException(Item item, Logger logger) {
-        logger.info("item " + item.name + ", sellIn : " + item.sellIn + " quality :" + item.quality);
+        if (item.quality < 0) {
+            logger.debug("Quality of item " + item.name + " is under 0");
+        }
+        if (item.quality > 50) {
+            logger.debug("Quality of item " + item.name + "is over 50");
+        } else {
+            logger.info("item " + item.name + ", sellIn : " + item.sellIn + " quality :" + item.quality+" is ok.");
+        }
     }
 }
