@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8552afae-f1ff-44e4-865f-f1e0f590794a" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/gildedrose/GildedRose.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gildedrose/GildedRose.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
@@ -24,14 +25,14 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="java" value="16" />
+          <entry key="java" value="18" />
           <entry key="txt" value="4" />
           <entry key="xml" value="7" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="16" />
+          <entry key="JAVA" value="18" />
           <entry key="PLAIN_TEXT" value="4" />
           <entry key="XML" value="7" />
         </counts>
@@ -52,11 +53,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/gildedrose/GildedRose.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="82" column="5" selection-end-line="144" />
+            <state relative-caret-position="139">
+              <caret line="58" column="32" lean-forward="true" selection-start-line="58" selection-start-column="32" selection-end-line="58" selection-end-column="32" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1380#1381#0" expanded="true" />
@@ -66,11 +67,30 @@
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/com/gildedrose/TexttestFixture.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="76">
+              <caret line="11" column="42" selection-start-line="11" selection-start-column="41" selection-end-line="11" selection-end-column="42" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/java/com/gildedrose/GildedRoseTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="315">
+              <caret line="27" column="28" lean-forward="true" selection-start-line="27" selection-start-column="28" selection-end-line="27" selection-end-column="28" />
+            </state>
+          </provider>
+        </entry>
+      </file>
     </leaf>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
       <find>items[i]</find>
+      <find>agedBrieQuality</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -169,7 +189,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1546941455609" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1546941963945" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
@@ -186,7 +206,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.TexttestFixture">
+  <component name="RunManager" selected="JUnit.GildedRoseTest.VerifyIfQualityOfAgedBrieIsRight">
     <configuration name="TexttestFixture" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.gildedrose.TexttestFixture" />
       <module name="business-logic" />
@@ -271,9 +291,9 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.GildedRoseTest.VerifyIfQualityOfAgedBrieIsRight" />
         <item itemvalue="Application.TexttestFixture" />
         <item itemvalue="JUnit.GildedRoseTest" />
-        <item itemvalue="JUnit.GildedRoseTest.VerifyIfQualityOfAgedBrieIsRight" />
         <item itemvalue="JUnit.GildedRoseTest.VerifyIfQualityOfConjuredItemIsRight" />
         <item itemvalue="JUnit.GildedRoseTest.VerifyIfQualityIsRight" />
       </list>
@@ -291,20 +311,11 @@
       <updated>1546850631410</updated>
       <workItem from="1546850634151" duration="20276000" />
       <workItem from="1546886602319" duration="658000" />
-      <workItem from="1546934452016" duration="6935000" />
+      <workItem from="1546934452016" duration="7437000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="GildedRoseTest_VerifyIfQualityIsRight - 2019.01.07 at 16h 05m 32s.xml">
-      <configuration name="GildedRoseTest.VerifyIfQualityIsRight" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="GildedRoseTest_VerifyIfQualityIsRight - 2019.01.07 at 16h 06m 34s.xml">
-      <configuration name="GildedRoseTest.VerifyIfQualityIsRight" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="GildedRoseTest_VerifyIfQualityIsRight - 2019.01.07 at 16h 06m 51s.xml">
-      <configuration name="GildedRoseTest.VerifyIfQualityIsRight" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="GildedRoseTest_VerifyIfQualityOfConjuredItemIsRight - 2019.01.07 at 16h 07m 45s.xml">
       <configuration name="GildedRoseTest.VerifyIfQualityOfConjuredItemIsRight" configurationId="JUnit" />
     </history-entry>
@@ -320,9 +331,24 @@
     <history-entry file="GildedRoseTest - 2019.01.07 at 16h 09m 15s.xml">
       <configuration name="GildedRoseTest" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="GildedRoseTest_VerifyIfQualityOfAgedBrieIsRight - 2019.01.08 at 11h 04m 13s.xml">
+      <configuration name="GildedRoseTest.VerifyIfQualityOfAgedBrieIsRight" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="GildedRoseTest_VerifyIfQualityOfAgedBrieIsRight - 2019.01.08 at 11h 04m 31s.xml">
+      <configuration name="GildedRoseTest.VerifyIfQualityOfAgedBrieIsRight" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="GildedRoseTest_VerifyIfQualityOfAgedBrieIsRight - 2019.01.08 at 11h 04m 54s.xml">
+      <configuration name="GildedRoseTest.VerifyIfQualityOfAgedBrieIsRight" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="GildedRoseTest_VerifyIfQualityOfAgedBrieIsRight - 2019.01.08 at 11h 05m 50s.xml">
+      <configuration name="GildedRoseTest.VerifyIfQualityOfAgedBrieIsRight" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="GildedRoseTest_VerifyIfQualityOfAgedBrieIsRight - 2019.01.08 at 11h 05m 58s.xml">
+      <configuration name="GildedRoseTest.VerifyIfQualityOfAgedBrieIsRight" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="27869000" />
+    <option name="totallyTimeSpent" value="28371000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="878" extended-state="6" />
@@ -337,7 +363,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.28590605" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.28456375" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -386,13 +412,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/gildedrose/GildedRoseTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="6" column="22" lean-forward="true" selection-start-line="6" selection-start-column="22" selection-end-line="6" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/gildedrose/Item.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
@@ -400,22 +419,29 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/gildedrose/TexttestFixture.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="42" selection-start-line="11" selection-start-column="41" selection-end-line="11" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/gildedrose/GildedRose.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="82" column="5" selection-end-line="144" />
+        <state relative-caret-position="139">
+          <caret line="58" column="32" lean-forward="true" selection-start-line="58" selection-start-column="32" selection-end-line="58" selection-end-column="32" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1380#1381#0" expanded="true" />
             <element signature="e#1408#1409#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/gildedrose/TexttestFixture.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="11" column="42" selection-start-line="11" selection-start-column="41" selection-end-line="11" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/gildedrose/GildedRoseTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="27" column="28" lean-forward="true" selection-start-line="27" selection-start-column="28" selection-end-line="27" selection-end-column="28" />
         </state>
       </provider>
     </entry>

@@ -56,7 +56,7 @@ public class GildedRose {
                 && !item.name.contains("Conjured") && !item.name.equals("Aged Brie") && item.quality > 0) {
             return item.quality = item.quality - 1;
         } else {
-            return item.quality = 0;
+            return item.quality;
         }
     }
 
@@ -66,7 +66,7 @@ public class GildedRose {
                 && !item.name.contains("Conjured") && !item.name.equals("Aged Brie") && item.quality > 1) {
             return item.quality = item.quality - 2;
         } else {
-            return item.quality = 0;
+            return item.quality;
         }
     }
 
