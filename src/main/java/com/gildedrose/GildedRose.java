@@ -52,20 +52,22 @@ public class GildedRose {
 
     //General method when the item sell in is positive
     private int positiveSellIn(Item item) {
-        if (!item.name.contains("Backstage passes") && !item.name.equals("Sulfuras, Hand of Ragnaros")
+        if (!item.name.equals("Backstage passes to a TAFKAL80ETC concert") && !item.name.equals("Sulfuras, Hand of Ragnaros")
                 && !item.name.contains("Conjured") && !item.name.equals("Aged Brie") && item.quality > 0) {
             return item.quality = item.quality - 1;
+        } else {
+            return item.quality = 0;
         }
-        return item.quality;
     }
 
     //General method when the item sell in is negative
     private int negativeSellIn(Item item) {
-        if (!item.name.contains("Backstage passes") && !item.name.equals("Sulfuras, Hand of Ragnaros")
+        if (!item.name.equals("Backstage passes to a TAFKAL80ETC concert") && !item.name.equals("Sulfuras, Hand of Ragnaros")
                 && !item.name.contains("Conjured") && !item.name.equals("Aged Brie") && item.quality > 1) {
             return item.quality = item.quality - 2;
+        } else {
+            return item.quality = 0;
         }
-        return item.quality;
     }
 
     // Method which update brie quality
@@ -135,7 +137,7 @@ public class GildedRose {
         if (item.quality > 50) {
             logger.debug("Quality of item " + item.name + "is over 50");
         } else {
-            logger.info("item " + item.name + ", sellIn : " + item.sellIn + " quality :" + item.quality+" is ok.");
+            logger.info("item " + item.name + ", sellIn : " + item.sellIn + " quality :" + item.quality + " is ok.");
         }
     }
 }
