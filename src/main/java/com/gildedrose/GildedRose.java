@@ -54,7 +54,7 @@ public class GildedRose {
     //General method when the item sell in is positive
     private int positiveSellIn(Item item) {
         if (!item.name.contains("Backstage passes") && !item.name.equals("Sulfuras, Hand of Ragnaros")
-                && !item.name.contains("Conjured") && !item.name.equals("Aged Brie") && item.quality > 0) {
+                && !item.name.equals("Conjured Mana Cake") && !item.name.equals("Aged Brie") && item.quality > 0) {
             return item.quality = item.quality - 1;
         } else {
             return item.quality;
@@ -64,7 +64,7 @@ public class GildedRose {
     //General method when the item sell in is negative
     private int negativeSellIn(Item item) {
         if (!item.name.contains("Backstage passes") && !item.name.equals("Sulfuras, Hand of Ragnaros")
-                && !item.name.contains("Conjured") && !item.name.equals("Aged Brie") && item.quality > 1) {
+                && !item.name.equals("Conjured Mana Cake") && !item.name.equals("Aged Brie") && item.quality > 1) {
             return item.quality = item.quality - 2;
         } else {
             return item.quality;
@@ -85,7 +85,7 @@ public class GildedRose {
 
     // Method which update conjured item quality
     private int conjuredQuality(Item item) {
-        if (item.name.contains("Conjured")) {
+        if (item.name.equals("Conjured Mana Cake")) {
             if (item.sellIn >= 0) {
                 return item.quality = item.quality - 2;
             }
