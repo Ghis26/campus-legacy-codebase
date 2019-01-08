@@ -93,7 +93,7 @@ public class GildedRose {
                 return item.quality = item.quality - 4;
             }
         }
-        if (item.name.contains("Conjured") && item.quality == 1) {
+        if (item.name.equals("Conjured Mana Cake") && item.quality == 1) {
             return item.quality = 0;
         }
         return item.quality;
@@ -103,10 +103,10 @@ public class GildedRose {
     private int passesQuality(Item item) {
         if (item.name.contains("Backstage passes")) {
             if (item.sellIn < 11 && item.sellIn >= 0) {
-                if (item.sellIn > 6 && item.sellIn >= 0 && item.quality <= 48) {
+                if (item.sellIn > 6 && item.quality <= 48) {
                     return item.quality = item.quality + 2;
                 }
-                if (item.sellIn < 6 && item.sellIn >= 0 && item.quality <= 47) {
+                if (item.sellIn < 6 && item.quality <= 47) {
                     return item.quality = item.quality + 3;
                 }
             }
