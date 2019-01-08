@@ -51,12 +51,10 @@ public class Item {
             if (item.sellIn >= 0) {
                 return item.quality = item.quality - 2;
             } else {
-                return item.quality = item.quality - 4;
-            }
+                return item.quality = item.quality - 4;}
         }
         if (item.name.startsWith("Conjured") && item.quality == 1) {
-            return item.quality = 0;
-        }
+            return item.quality = 0;}
         return item.quality;
     }
 
@@ -71,8 +69,7 @@ public class Item {
         if (item.sellIn < 0) {
             return item.quality = 0;
         } else {
-            return item.quality = item.quality + 1;
-        }
+            return item.quality = item.quality + 1;}
     }
 
     //Method which set sulfuras quality
