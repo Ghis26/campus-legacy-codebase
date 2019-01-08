@@ -7,49 +7,48 @@ import org.slf4j.Logger;
 public class GildedRose {
     Item[] items;
 
-    GildedRose(Item[] items) {
+    public GildedRose(Item[] items) {
         this.items = items;
     }
 
     // method which update item quality
-    void updateQuality() {
+    public void updateQuality() {
         final Logger logger = LoggerFactory.getLogger(GildedRose.class);
         for (Item item : items) {
-            try {
+            if (item.quality >= 0 && item.quality <= 50) {
 
-                if (item.quality >= 0 && item.quality <= 50) {
-
-                    //Downgrade items sellIn
-                    if (!item.name.contains("Sulfuras")) {
-                        item.sellIn--;
-                    }
-
-                    // quality if sell in > 0
-                    if (item.sellIn >= 0) {
-                        item.quality = positiveSellIn(item);
-                    } else {
-                        // quality if sell in < 0
-                        item.quality = negativeSellIn(item);
-                    }
-
-                    // Update quality of Brie
-                    item.quality = agedBrieQuality(item);
-
-                    //Set quality of Sulfuras
-                    item.quality = sulfurasQuality(item);
-
-                    //Update Quality of conjured items
-                    item.quality = conjuredQuality(item);
-
-                    //Update quality of passes
-                    item.quality = passesQuality(item);
+                //Downgrade items sellIn
+                if (!item.name.contains("Sulfuras")) {
+                    item.sellIn--;
                 }
-            } catch (Exception e) {
-                logger.debug("error on item " + item.name + ", sellIn : " + item.sellIn + " quality :" + item.quality +
-                        "with error : " + e);
+
+                // quality if sell in > 0
+                if (item.sellIn >= 0) {
+                    item.quality = positiveSellIn(item);
+                    catchException(item, logger);
+                } else {
+                    // quality if sell in < 0
+                    item.quality = negativeSellIn(item);
+                    catchException(item, logger);
+                }
+
+                // Update quality of Brie
+                item.quality = agedBrieQuality(item);
+                catchException(item, logger);
+
+                //Set quality of Sulfuras
+                item.quality = sulfurasQuality(item);
+                catchException(item, logger);
+
+                //Update Quality of conjured items
+                item.quality = conjuredQuality(item);
+                catchException(item, logger);
+
+                //Update quality of passes
+                item.quality = passesQuality(item);
+                catchException(item, logger);
             }
         }
-        logger.info("Update complete.");
     }
 
     public Item[] getItems() {
@@ -129,5 +128,9 @@ public class GildedRose {
             return item.quality = 80;
         }
         return item.quality;
+    }
+
+    private void catchException(Item item, Logger logger) {
+        logger.info("item " + item.name + ", sellIn : " + item.sellIn + " quality :" + item.quality+" complete");
     }
 }
