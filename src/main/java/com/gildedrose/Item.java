@@ -23,8 +23,10 @@ public class Item {
 
     // Method which set specific attribute for the item
     boolean setSpecific(Item item) {
-        if (item.name.contains("Backstage passes") || item.name.equals("Sulfuras, Hand of Ragnaros")
-                || item.name.startsWith("Conjured") || item.name.equals("Aged Brie")) {
+        if (item.name.contains("Backstage passes") ||
+                item.name.equals("Sulfuras, Hand of Ragnaros") ||
+                item.name.startsWith("Conjured") ||
+                item.name.equals("Aged Brie")) {
             return item.specific = true;
         } else {
             return item.specific = false;
@@ -61,21 +63,16 @@ public class Item {
     // Method which update passes quality
     int passesQuality(Item item) {
         if (item.name.contains("Backstage passes")) {
-            if (item.sellIn < 11) {
-                if (item.sellIn >= 6 && item.quality <= 48) {
-                    return item.quality = item.quality + 2;
-                }
-                if (item.sellIn < 6 && item.quality <= 47) {
-                    return item.quality = item.quality + 3;
-                }
-            }
-            if (item.sellIn < 0) {
-                return item.quality = 0;
-            } else {
-                return item.quality = item.quality + 1;
-            }
+            if (item.sellIn < 11 && item.sellIn >= 6 && item.quality <= 48) {
+                return item.quality = item.quality + 2;
+            } if (item.sellIn < 6 && item.quality <= 47) {
+                return item.quality = item.quality + 3;}
         }
-        return item.quality;
+        if (item.sellIn < 0) {
+            return item.quality = 0;
+        } else {
+            return item.quality = item.quality + 1;
+        }
     }
 
     //Method which set sulfuras quality
