@@ -38,4 +38,12 @@ public class TddGildedRose {
         mainGilded.updateQuality();
         assertThat(new Item[]{testItem}[0]).isEqualToComparingFieldByField(new Item("Chievre", -1, 0));
     }
+
+    @Test
+    public void itemShouldNamedAgedBrie() {
+        Item testItem = new Item("Aged Brie", 0, 0);
+        GildedRose mainGilded = new GildedRose(new Item[]{testItem});
+        mainGilded.updateQuality();
+        assertThat(new Item[]{testItem}[0].name).isEqualTo("Aged Brie");
+    }
 }
