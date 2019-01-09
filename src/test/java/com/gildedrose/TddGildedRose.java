@@ -19,13 +19,29 @@ public class TddGildedRose {
         Item testItem = new Item("Chievre", -5, 2);
         GildedRose mainGilded = new GildedRose(new Item[]{testItem});
         mainGilded.updateQuality();
-
         assertThat(new Item[]{testItem}[0]).isEqualToComparingFieldByField(new Item("Chievre", -6, 0));
+    }
+
+    @Test
+    public void shouldResetToZeroWhenQualityIsUnderZero() {
+        Item testItem = new Item("Chievre", 3, -1);
+        GildedRose mainGilded = new GildedRose(new Item[]{testItem});
+        mainGilded.updateQuality();
+
+        assertThat(new Item[]{testItem}[0]).isEqualToComparingFieldByField(new Item("Chievre", 2, 0));
     }
 
     @Test
     public void itemQualityShouldNeverBeUnderZero() {
         Item testItem = new Item("Chievre", 1, 0);
+        GildedRose mainGilded = new GildedRose(new Item[]{testItem});
+        mainGilded.updateQuality();
+        assertThat(new Item[]{testItem}[0]).isEqualToComparingFieldByField(new Item("Chievre", 0, 0));
+    }
+
+    @Test
+    public void itemQualityDecrease() {
+        Item testItem = new Item("Chievre", 1, 1);
         GildedRose mainGilded = new GildedRose(new Item[]{testItem});
         mainGilded.updateQuality();
         assertThat(new Item[]{testItem}[0]).isEqualToComparingFieldByField(new Item("Chievre", 0, 0));
@@ -121,11 +137,27 @@ public class TddGildedRose {
     }
 
     @Test
+    public void backstageQualityShouldIncreaseByTwoWhenSellInIsEqualsToTen() {
+        Item testItem = new Item("Backstage passes to a TAFKAL80ETC concert", 11, 2);
+        GildedRose mainGilded = new GildedRose(new Item[]{testItem});
+        mainGilded.updateQuality();
+        assertThat(new Item[]{testItem}[0]).isEqualToComparingFieldByField(new Item("Backstage passes to a TAFKAL80ETC concert", 10, 4));
+    }
+
+    @Test
     public void backstageQualityShouldIncreaseByTwoWhenSellInIsUnderSix() {
         Item testItem = new Item("Backstage passes to a TAFKAL80ETC concert", 5, 2);
         GildedRose mainGilded = new GildedRose(new Item[]{testItem});
         mainGilded.updateQuality();
         assertThat(new Item[]{testItem}[0]).isEqualToComparingFieldByField(new Item("Backstage passes to a TAFKAL80ETC concert", 4, 5));
+    }
+
+    @Test
+    public void backstageQualityShouldIncreaseByTwoWhenSellInIsEqualsToFive() {
+        Item testItem = new Item("Backstage passes to a TAFKAL80ETC concert", 6, 2);
+        GildedRose mainGilded = new GildedRose(new Item[]{testItem});
+        mainGilded.updateQuality();
+        assertThat(new Item[]{testItem}[0]).isEqualToComparingFieldByField(new Item("Backstage passes to a TAFKAL80ETC concert", 5, 5));
     }
 
     @Test
@@ -178,11 +210,26 @@ public class TddGildedRose {
 
     @Test
     public void wineQualityShouldDecreaseWhenSellInIsUnderMinusHundred() {
-        Item testItem = new Item("Aging Red Wine", -110, 10);
+        Item testItem = new Item("Aging Red Wine", -100, 10);
         GildedRose mainGilded = new GildedRose(new Item[]{testItem});
         mainGilded.updateQuality();
-        assertThat(new Item[]{testItem}[0]).isEqualToComparingFieldByField(new Item("Aging Red Wine", -111, 9));
+        assertThat(new Item[]{testItem}[0]).isEqualToComparingFieldByField(new Item("Aging Red Wine", -101, 9));
     }
 
+    @Test
+    public void wineQualityShouldIncreaseWhenSellInIsEqualsToHundred() {
+        Item testItem = new Item("Aging Red Wine", -99, 10);
+        GildedRose mainGilded = new GildedRose(new Item[]{testItem});
+        mainGilded.updateQuality();
+        assertThat(new Item[]{testItem}[0]).isEqualToComparingFieldByField(new Item("Aging Red Wine", -100, 11));
+    }
+
+    @Test
+    public void brieSellInShouldDecrease() {
+        Item testItem = new Item("Aged Brie", -99, 10);
+        GildedRose mainGilded = new GildedRose(new Item[]{testItem});
+        mainGilded.updateQuality();
+        assertThat(new Item[]{testItem}[0]).isEqualToComparingFieldByField(new Item("Aged Brie", -100, 12));
+    }
 
 }

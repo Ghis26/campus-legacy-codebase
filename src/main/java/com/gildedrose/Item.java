@@ -19,9 +19,4 @@ public class Item {
         this.sellIn = sellIn;
         this.quality = quality;
     }
-
-    @Override
-    public String toString() {
-        return this.name + ", " + this.sellIn + ", " + this.quality;
-    }
 }

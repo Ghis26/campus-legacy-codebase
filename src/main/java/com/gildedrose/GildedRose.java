@@ -60,8 +60,8 @@ public class GildedRose {
         }
     }
 
-    private int decreaseSellIn(Item item) {
-        return item.sellIn--;
+    private void decreaseSellIn(Item item) {
+        item.sellIn--;
     }
 
     private void updateNormal(Item item) {
@@ -96,10 +96,7 @@ public class GildedRose {
     }
 
     void decreaseQuality(Item item) {
-        item.quality--;
-        if (item.quality < 0) {
-            item.quality = 0;
-        }
+        item.quality = Math.max(0, item.quality - 1);
     }
 
     void increaseQuality(Item item) {
