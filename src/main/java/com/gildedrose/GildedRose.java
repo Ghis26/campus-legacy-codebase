@@ -104,11 +104,7 @@ public class GildedRose {
             item.quality++;
         }
     }
-    /**
-     * useless method, there from the beginning
-     *
-     * @return array of Item
-     */
+
     public Item[] getItems() {
         return items;
     }
