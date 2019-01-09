@@ -12,6 +12,9 @@ public class GildedRose {
         for (Item item: items){
             item.sellIn--;
             item.quality--;
+            if( item.sellIn < 0 ) {
+                item.quality --;
+            }
         }
     }
 }
