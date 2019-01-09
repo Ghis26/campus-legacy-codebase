@@ -111,12 +111,10 @@ public class GildedRose {
      * If sellin < -100 quality decremented by 1
      */
     private void updateWine(Item item) {
-
-        if (item.sellIn < -100) {
-            decreaseQuality(item);
-        }
-        if (item.sellIn < 0) {
-            increaseQuality(item);
+        boolean isDone = false;
+        isDone = decreaseWineQuality(item, isDone);
+        if (!isDone){
+         increaseWineQuality(item);
         }
     }
 
@@ -157,6 +155,21 @@ public class GildedRose {
         item.quality--;
         if (item.quality <= 0) item.quality = 0;
     }
+
+
+    private void increaseWineQuality(Item item) {
+        if (item.sellIn < 0) {
+            increaseQuality(item);
+        }
+    }
+
+    private boolean decreaseWineQuality(Item item, boolean isDone) {
+            if (item.sellIn < -100) {
+                decreaseQuality(item);
+                isDone = true;
+                return isDone;
+            } return isDone;
+        }
 
     /**
      * useless method, there from the beginning
