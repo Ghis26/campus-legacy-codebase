@@ -20,7 +20,7 @@ public class TexttestFixture {
 
         GildedRose app = new GildedRose(items);
 
-        int days = 3;
+        int days = 150;
         if (args.length > 0) {
             days = Integer.parseInt(args[0]) + 1;
         }

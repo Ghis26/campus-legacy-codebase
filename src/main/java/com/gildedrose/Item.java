@@ -66,7 +66,12 @@ public class Item {
      *
      * @return boolean
      */
-    boolean isAgingRedWine() { return this.name.equals("Aging Red Wine");
+    boolean isAgingRedWine() {
+        return this.name.equals("Aging Red Wine");
+    }
+
+    boolean isToOld() {
+        return this.sellIn < -100;
     }
 
     /**
