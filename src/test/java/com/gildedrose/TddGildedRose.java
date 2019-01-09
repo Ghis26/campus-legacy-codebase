@@ -103,11 +103,19 @@ public class TddGildedRose {
         mainGilded.updateQuality();
         assertThat(new Item[]{testItem}[0]).isEqualToComparingFieldByField(new Item("Sulfuras", 0, 80));
     }
+
     @Test
     public void backstageQualityShouldIncrease() {
         Item testItem = new Item("Backstage passes", 0, 2);
         GildedRose mainGilded = new GildedRose(new Item[]{testItem});
         mainGilded.updateQuality();
         assertThat(new Item[]{testItem}[0]).isEqualToComparingFieldByField(new Item("Backstage passes", -1, 4));
+    }
+    @Test
+    public void backstageQualityShouldIncreaseByTwoWhenSellInIsUnderEleven() {
+        Item testItem = new Item("Backstage passes", 9, 2);
+        GildedRose mainGilded = new GildedRose(new Item[]{testItem});
+        mainGilded.updateQuality();
+        assertThat(new Item[]{testItem}[0]).isEqualToComparingFieldByField(new Item("Backstage passes", 8, 4));
     }
 }
