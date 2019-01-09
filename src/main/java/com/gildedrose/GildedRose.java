@@ -41,6 +41,10 @@ public class GildedRose {
     private void updateConjured(Item item) {
         decreaseQuality(item);
         decreaseQuality(item);
+        if(isSoldOut(item)) {
+            decreaseQuality(item);
+            decreaseQuality(item);
+        }
     }
 
     private int decreaseSellIn(Item item) {

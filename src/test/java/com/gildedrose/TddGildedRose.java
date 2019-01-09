@@ -151,4 +151,12 @@ public class TddGildedRose {
         mainGilded.updateQuality();
         assertThat(new Item[]{testItem}[0]).isEqualToComparingFieldByField(new Item("Conjured Mana Cake", 2, 12));
     }
+
+    @Test
+    public void itemConjuredQualityShouldDecreaseByFourWhenSellInIsUnderZero() {
+        Item testItem = new Item("Conjured Mana Cake", -2, 14);
+        GildedRose mainGilded = new GildedRose(new Item[]{testItem});
+        mainGilded.updateQuality();
+        assertThat(new Item[]{testItem}[0]).isEqualToComparingFieldByField(new Item("Conjured Mana Cake", -3, 10));
+    }
 }
