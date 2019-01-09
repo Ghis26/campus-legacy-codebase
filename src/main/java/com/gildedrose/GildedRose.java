@@ -95,11 +95,11 @@ public class GildedRose {
         return item.sellIn < 0;
     }
 
-    void decreaseQuality(Item item) {
+    public void decreaseQuality(Item item) {
         item.quality = Math.max(0, item.quality - 1);
     }
 
-    void increaseQuality(Item item) {
+    public void increaseQuality(Item item) {
         if (item.quality < 50) {
             item.quality++;
         }

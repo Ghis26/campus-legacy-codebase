@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="64af25ae-cddd-46b3-ad42-79c3f7ee7800" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/gildedrose/GildedRose.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gildedrose/GildedRose.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gildedrose/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gildedrose/Item.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/gildedrose/TddGildedRose.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/gildedrose/TddGildedRose.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -51,13 +48,13 @@
         <counts>
           <entry key="dummy" value="2" />
           <entry key="gitignore" value="5" />
-          <entry key="java" value="3942" />
+          <entry key="java" value="3980" />
           <entry key="xml" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="3942" />
+          <entry key="JAVA" value="3980" />
           <entry key="PLAIN_TEXT" value="7" />
           <entry key="XML" value="1" />
         </counts>
@@ -69,13 +66,15 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/gildedrose/GildedRose.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="194">
-              <caret line="101" column="9" lean-forward="true" selection-start-line="101" selection-start-column="9" selection-end-line="101" selection-end-column="9" />
+            <state relative-caret-position="347">
+              <caret line="101" column="11" selection-start-line="101" selection-start-column="11" selection-end-line="101" selection-end-column="11" />
               <folding>
                 <element signature="e#1840#1841#0" expanded="true" />
                 <element signature="e#1870#1871#0" expanded="true" />
                 <element signature="e#2417#2418#0" expanded="true" />
                 <element signature="e#2455#2456#0" expanded="true" />
+                <element signature="e#2622#2623#0" expanded="true" />
+                <element signature="e#2682#2683#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -218,53 +217,6 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="business-logic" type="b2602c69:ProjectViewProjectNode" />
-              <item name="campus-legacy-codebase" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="gildedrose" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="business-logic" type="b2602c69:ProjectViewProjectNode" />
-              <item name="campus-legacy-codebase" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="business-logic" type="b2602c69:ProjectViewProjectNode" />
-              <item name="campus-legacy-codebase" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="business-logic" type="b2602c69:ProjectViewProjectNode" />
-              <item name="campus-legacy-codebase" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="gildedrose" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="business-logic" type="b2602c69:ProjectViewProjectNode" />
-              <item name="campus-legacy-codebase" type="462c0819:PsiDirectoryNode" />
-              <item name="target" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="business-logic" type="b2602c69:ProjectViewProjectNode" />
-              <item name="campus-legacy-codebase" type="462c0819:PsiDirectoryNode" />
-              <item name="target" type="462c0819:PsiDirectoryNode" />
-              <item name="pit-reports" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="business-logic" type="b2602c69:ProjectViewProjectNode" />
-              <item name="campus-legacy-codebase" type="462c0819:PsiDirectoryNode" />
-              <item name="target" type="462c0819:PsiDirectoryNode" />
-              <item name="pit-reports" type="462c0819:PsiDirectoryNode" />
-              <item name="201901091552" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -275,7 +227,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1547045750392" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1547046911479" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -403,14 +355,11 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1547025537398</updated>
-      <workItem from="1547025539055" duration="15531000" />
+      <workItem from="1547025539055" duration="16320000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="TddGildedRose_shouldDecreaseTwiceWhenSellInIsEqualsToZero - 2019.01.09 at 15h 41m 30s.xml">
-      <configuration name="TddGildedRose.shouldDecreaseTwiceWhenSellInIsEqualsToZero" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="TddGildedRose_shouldDecreaseTwiceWhenSellInIsEqualsToZero - 2019.01.09 at 15h 45m 11s.xml">
       <configuration name="TddGildedRose.shouldDecreaseTwiceWhenSellInIsEqualsToZero" configurationId="JUnit" />
     </history-entry>
@@ -438,9 +387,12 @@
     <history-entry file="TddGildedRose - 2019.01.09 at 15h 52m 51s.xml">
       <configuration name="TddGildedRose" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="TddGildedRose - 2019.01.09 at 15h 55m 33s.xml">
+      <configuration name="TddGildedRose" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="15531000" />
+    <option name="totallyTimeSpent" value="16320000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="878" extended-state="6" />
@@ -471,7 +423,7 @@
       <window_info anchor="right" id="Capture Analysis" />
       <window_info anchor="right" id="Palette&#9;" />
       <window_info anchor="right" id="Database" />
-      <window_info anchor="right" id="Maven Projects" sideWeight="0.4970646" visible="true" weight="0.3295302" />
+      <window_info anchor="right" id="Maven Projects" sideWeight="0.4970646" weight="0.3295302" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" sideWeight="0.49902153" weight="0.24966443" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -568,13 +520,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/gildedrose/GildedRose.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="194">
-          <caret line="101" column="9" lean-forward="true" selection-start-line="101" selection-start-column="9" selection-end-line="101" selection-end-column="9" />
+        <state relative-caret-position="347">
+          <caret line="101" column="11" selection-start-line="101" selection-start-column="11" selection-end-line="101" selection-end-column="11" />
           <folding>
             <element signature="e#1840#1841#0" expanded="true" />
             <element signature="e#1870#1871#0" expanded="true" />
             <element signature="e#2417#2418#0" expanded="true" />
             <element signature="e#2455#2456#0" expanded="true" />
+            <element signature="e#2622#2623#0" expanded="true" />
+            <element signature="e#2682#2683#0" expanded="true" />
           </folding>
         </state>
       </provider>
