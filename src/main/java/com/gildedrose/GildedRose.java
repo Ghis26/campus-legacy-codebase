@@ -45,6 +45,10 @@ public class GildedRose {
         if (item.sellIn <= 10) {
             increaseQuality(item);
         }
+        if (item.sellIn <= 5) {
+            increaseQuality(item);
+
+        }
     }
 
     private void updateAgedBrie(Item item) {
