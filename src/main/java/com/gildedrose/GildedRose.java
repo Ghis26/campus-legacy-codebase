@@ -32,4 +32,8 @@ public class GildedRose {
     public void decreaseQuality(Item item) {
             item.quality--;
     }
+
+    public void increaseQuality(Item testItem) {
+        
+    }
 }
