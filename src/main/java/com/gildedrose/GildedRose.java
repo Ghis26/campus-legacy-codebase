@@ -113,10 +113,10 @@ public class GildedRose {
     private void updateWine(Item item) {
         decreaseSellIn(item);
 
-        if (item.isToOld()) {
+        if (item.isToOld() && item.isSoldOut()) {
             decreaseQuality(item);
         }
-        if (!item.isToOld() && item.isSoldOut()) {
+        else if (!item.isToOld() && item.isSoldOut()) {
             increaseQuality(item);
         }
     }
