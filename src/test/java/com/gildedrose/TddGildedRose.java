@@ -22,4 +22,15 @@ public class TddGildedRose {
 
         assertThat(new Item[]{testItem}[0]).isEqualToComparingFieldByField(new Item("Chievre", -6, 0));
     }
+
+    @Test
+    public void itemQualityShouldNeverBeUnderZero() {
+        Item testItem = new Item("Chievre", 1, 0);
+        GildedRose mainGilded = new GildedRose(new Item[]{testItem});
+        mainGilded.updateQuality();
+        assertThat(new Item[]{testItem}[0]).isEqualToComparingFieldByField(new Item("Chievre", 0, 0));
+
+        mainGilded.updateQuality();
+        assertThat(new Item[]{testItem}[0]).isEqualToComparingFieldByField(new Item("Chievre", -1, 0));
+    }
 }
