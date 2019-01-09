@@ -12,7 +12,7 @@ public class GildedRose {
         for (Item item : items) {
             if (!item.name.equals("Sulfuras")) {
                 item.sellIn--;
-                if (!item.name.equals("Aged Brie")) {
+                if (!item.name.equals("Aged Brie") && !item.name.equals("Backstage passes")) {
                     decreaseQuality(item);
                     if (item.sellIn < 0) {
                         decreaseQuality(item);

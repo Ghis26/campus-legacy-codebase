@@ -108,6 +108,6 @@ public class TddGildedRose {
         Item testItem = new Item("Backstage passes", 0, 2);
         GildedRose mainGilded = new GildedRose(new Item[]{testItem});
         mainGilded.updateQuality();
-        assertThat(new Item[]{testItem}[0]).isEqualToComparingFieldByField(new Item("Sulfuras", 0, 3));
+        assertThat(new Item[]{testItem}[0]).isEqualToComparingFieldByField(new Item("Backstage passes", -1, 4));
     }
 }
