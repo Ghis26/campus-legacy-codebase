@@ -1,97 +1,151 @@
 package com.gildedrose;
 
-import org.slf4j.LoggerFactory;
 import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class GildedRose {
     Item[] items;
+    private static final Logger logger = LoggerFactory.getLogger(GildedRose.class);
 
-    public GildedRose(Item[] items) {
+    GildedRose(Item[] items) {
         this.items = items;
     }
 
-    public void updateQuality() {
+    /**
+     * Doing the job.
+     * foreach item will check if is legendary, cheesy, a pass or conjured
+     * for item.category : update'Category'
+     */
+    void updateQuality() {
         for (Item item : items) {
-            item.specific = item.setSpecific(item);
-            item.quality = item.sulfurasQuality(item);
-        }
-        final Logger logger = LoggerFactory.getLogger(GildedRose.class);
-        for (Item item : items) {
-            item.quality = generalMethod(item);
-            item.quality = correctionQuality(item);
-            displayLog(item, logger);
+            logger.info("ITEM :: " + item.toString());
+            chooseWhatToDo(item);
         }
     }
 
-    //General method
-    private int generalMethod(Item item) {
-        if (item.quality >= 0 && item.quality <= 50) {
-            if (!item.name.contains("Sulfuras")) {
-                item.sellIn--;}
-            if (item.specific) {
-                return item.quality = specificItems(item);
-            } else {
-                return item.quality = noSpecificItems(item);}
-        }
-        return item.quality;
+    /**
+     * does what it say
+     *
+     * @param item
+     */
+    private void chooseWhatToDo(Item item) {
+        if (item.isCheese()) updateCheese(item);
+        else if (item.isAPass()) updatePass(item);
+        else if (item.isConjured()) updateConjured(item);
+        else if (item.isLegendary()) updateLegendary(item);
+        else updateOther(item);
     }
 
-    //Method when the item is specific
-    private int specificItems(Item item) {
-        item.quality = item.agedBrieQuality(item);
-        item.quality = item.conjuredQuality(item);
-        item.quality = item.passesQuality(item);
-        return item.quality;
+    /**
+     * @param item
+     */
+    private void updateLegendary(Item item) {
+        //do Nothing, this is legendary BRO !
     }
 
-    //Method when the item isn't specific
-    private int noSpecificItems(Item item) {
-        if (item.sellIn >= 0) {
-            return item.quality = positiveSellIn(item);
-        } else {
-            return item.quality = negativeSellIn(item);
+    /**
+     * increment chesse once
+     * if soldout, increment seconde time
+     *
+     * @param item
+     */
+    private void updateCheese(Item item) {
+        decreaseSellIn(item);
+
+        increaseQuality(item);
+        if (item.isSoldOut()) increaseQuality(item);
+    }
+
+    /**
+     * increment pass once
+     * if sellin < 10 increment another timer
+     * if sellin < 5 increment another timer
+     * if sellin = 0, quality killes
+     *
+     * @param item
+     */
+    private void updatePass(Item item) {
+        decreaseSellIn(item);
+
+        increaseQuality(item);
+        if (item.sellIn <= 10) increaseQuality(item);
+        if (item.sellIn <= 5) increaseQuality(item);
+        if (item.isSoldOut()) item.quality = 0;
+    }
+
+    /**
+     * decrease conjured twice
+     * if soldout decrease twice more
+     *
+     * @param item
+     */
+    private void updateConjured(Item item) {
+        decreaseSellIn(item);
+
+        decreaseQuality(item);
+        decreaseQuality(item);
+        if (item.isSoldOut()) {
+            decreaseQuality(item);
+            decreaseQuality(item);
         }
     }
 
-    //Method when the item sell in is positive
-    private int positiveSellIn(Item item) {
-        if (item.quality > 0) {
-            return item.quality = item.quality - 1;
-        } else {
-            return item.quality;
-        }
+    /**
+     * decrement quality of normal item
+     *
+     * @param item
+     */
+    private void updateOther(Item item) {
+        decreaseSellIn(item);
+
+        decreaseQuality(item);
+        if (item.isSoldOut()) decreaseQuality(item);
     }
 
-    //General method when the item sell in is negative
-    private int negativeSellIn(Item item) {
-        if (item.quality > 1) {
-            return item.quality = item.quality - 2;
-        } else{
-            return item.quality;
-        }
+    /**
+     * item.sellIn decreament
+     * does what it says
+     *
+     * @param item
+     */
+    private void decreaseSellIn(Item item) {
+        item.sellIn = item.sellIn - 1;
     }
 
-    // Method for displaying logs
-    private void displayLog(Item item, Logger logger) {
-        if (item.quality < 0) {
-            logger.debug("Quality of item " + item.name + " is under 0");
-        }
-        if (item.quality > 50) {
-            logger.debug("Quality of item " + item.name + "is over 50");
-        } else {
-            logger.info("item " + item.name + ", sellIn: " + item.sellIn +
-                    " quality :" + item.quality + " is ok.");
-        }
+    /**
+     * item.quality increment
+     * <p>
+     * if quality less or equal from 0, item is reset to 0 (just in case)
+     * then icrement the quality
+     * then check if quality is not more than 50 (max from the spec)
+     *
+     * @param item
+     */
+    private void increaseQuality(Item item) {
+        if (item.quality <= 0) item.quality = 0;
+        item.quality++;
+        if (item.quality >= 50) item.quality = 50;
     }
 
-    // Method used when the quality is over 50 or less than 0
-    private int correctionQuality(Item item) {
-        if (item.quality < 0) {
-            return item.quality = 0;
-        }
-        if (item.quality > 50 && !item.name.contains("Sulfuras")) {
-            return item.quality = 50;
-        }
-        return item.quality;
+    /**
+     * item.quality decrement
+     * <p>
+     * decrement item
+     * then check if quality is less or equals from 0, if true, return 0 (min from the specs)
+     *
+     * @param item
+     */
+    private void decreaseQuality(Item item) {
+        item.quality--;
+        if (item.quality <= 0) item.quality = 0;
+    }
+
+    /**
+     * useless method, there from the beginning
+     *
+     * @return array of Item
+     */
+    public Item[] getItems() {
+        return items;
     }
 }
