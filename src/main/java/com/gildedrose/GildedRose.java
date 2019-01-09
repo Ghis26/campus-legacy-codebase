@@ -9,5 +9,9 @@ public class GildedRose {
 
 
     public void updateQuality() {
+        for (Item item: items){
+            item.sellIn--;
+            item.quality--;
+        }
     }
 }
