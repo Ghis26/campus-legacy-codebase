@@ -173,7 +173,7 @@ public class TddGildedRose {
         Item testItem = new Item("Conjured Mana Cake", 0, 48);
         GildedRose mainGilded = new GildedRose(new Item[]{testItem});
         mainGilded.updateQuality();
-        assertThat(new Item[]{testItem}[0].name).isEqualTo("Conjured Mana Cake");
+        assertThat(new Item("Conjured Mana Cake",0,48).name).contains("Conjured");
     }
 
     @Test

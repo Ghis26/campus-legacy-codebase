@@ -4,7 +4,7 @@ public class GildedRose {
     public static final String SULFURAS = "Sulfuras, Hand of Ragnaros";
     public static final String BRIE = "Aged Brie";
     public static final String PASSES = "Backstage passes to a TAFKAL80ETC concert";
-    public static final String CONJURED = "Conjured Mana Cake";
+    public static final String CONJURED = "Conjured";
     public static final String WINE = "Aging Red Wine";
 
     Item[] items;
@@ -16,7 +16,8 @@ public class GildedRose {
 
     public void updateQuality() {
         for (Item item : items) {
-            switch (item.name) {
+            String state = whatKindIsIt(item);
+            switch (state) {
                 case SULFURAS:
                     break;
                 case BRIE:
@@ -41,6 +42,15 @@ public class GildedRose {
                     break;
             }
         }
+    }
+
+    private String whatKindIsIt(Item item) {
+        return item.name.equals(SULFURAS) ? SULFURAS :
+                item.name.equals(BRIE) ? BRIE :
+                        item.name.equals(PASSES) ? PASSES :
+                                item.name.startsWith(CONJURED) ? CONJURED :
+                                        item.name.equals(WINE) ? WINE :
+                                                "Other";
     }
 
     private void updateWineQuality(Item item) {
