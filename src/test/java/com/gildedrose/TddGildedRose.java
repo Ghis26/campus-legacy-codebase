@@ -96,5 +96,11 @@ public class TddGildedRose {
         assertThat(new Item[]{testItem}[0].quality).isEqualTo(50);
     }
 
-
+    @Test
+    public void itemNamedSulfurasQualityAndSellInNeverMove() {
+        Item testItem = new Item("Sulfuras", 0, 80);
+        GildedRose mainGilded = new GildedRose(new Item[]{testItem});
+        mainGilded.updateQuality();
+        assertThat(new Item[]{testItem}[0]).isEqualToComparingFieldByField(new Item("Sulfuras", 0, 80));
+    }
 }
