@@ -46,4 +46,12 @@ public class TddGildedRose {
         mainGilded.updateQuality();
         assertThat(new Item[]{testItem}[0].name).isEqualTo("Aged Brie");
     }
+
+    @Test
+    public void AgedBrieShouldGrowTwiceWhenSellInIsAtZero() {
+        Item testItem = new Item("Aged Brie", -1, 0);
+        GildedRose mainGilded = new GildedRose(new Item[]{testItem});
+        mainGilded.updateQuality();
+        assertThat(new Item[]{testItem}[0].quality).isEqualTo(2);
+    }
 }
