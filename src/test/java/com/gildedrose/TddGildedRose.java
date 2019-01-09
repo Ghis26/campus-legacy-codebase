@@ -159,4 +159,30 @@ public class TddGildedRose {
         mainGilded.updateQuality();
         assertThat(new Item[]{testItem}[0]).isEqualToComparingFieldByField(new Item("Conjured Mana Cake", -3, 10));
     }
+
+    @Test
+    public void wineQualityShouldNotMoveWhenSellInPositive() {
+        Item testItem = new Item("Aging Red Wine", 20, 10);
+        GildedRose mainGilded = new GildedRose(new Item[]{testItem});
+        mainGilded.updateQuality();
+        assertThat(new Item[]{testItem}[0]).isEqualToComparingFieldByField(new Item("Aging Red Wine", 19, 10));
+    }
+
+    @Test
+    public void wineQualityShouldIncreaseWhenSellInNegative() {
+        Item testItem = new Item("Aging Red Wine", -20, 10);
+        GildedRose mainGilded = new GildedRose(new Item[]{testItem});
+        mainGilded.updateQuality();
+        assertThat(new Item[]{testItem}[0]).isEqualToComparingFieldByField(new Item("Aging Red Wine", -21, 11));
+    }
+
+    @Test
+    public void wineQualityShouldDecreaseWhenSellInIsUnderMinusHundred() {
+        Item testItem = new Item("Aging Red Wine", -110, 10);
+        GildedRose mainGilded = new GildedRose(new Item[]{testItem});
+        mainGilded.updateQuality();
+        assertThat(new Item[]{testItem}[0]).isEqualToComparingFieldByField(new Item("Aging Red Wine", -111, 9));
+    }
+
+
 }

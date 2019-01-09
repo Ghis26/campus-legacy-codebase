@@ -5,6 +5,7 @@ public class GildedRose {
     public static final String BRIE = "Aged Brie";
     public static final String PASSES = "Backstage passes to a TAFKAL80ETC concert";
     public static final String CONJURED = "Conjured Mana Cake";
+    public static final String WINE = "Aging Red Wine";
 
     Item[] items;
 
@@ -30,11 +31,24 @@ public class GildedRose {
                     decreaseSellIn(item);
                     updateConjured(item);
                     break;
+                case WINE:
+                    decreaseSellIn(item);
+                    updateWineQuality(item);
+                    break;
                 default:
                     decreaseSellIn(item);
                     updateNormal(item);
                     break;
             }
+        }
+    }
+
+    private void updateWineQuality(Item item) {
+        if(item.sellIn< -100){
+            decreaseQuality(item);
+        }
+        else if(item.sellIn<0){
+            increaseQuality(item);
         }
     }
 
