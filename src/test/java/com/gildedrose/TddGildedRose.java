@@ -29,7 +29,12 @@ public class TddGildedRose {
         GildedRose mainGilded = new GildedRose(new Item[]{testItem});
         mainGilded.updateQuality();
         assertThat(new Item[]{testItem}[0]).isEqualToComparingFieldByField(new Item("Chievre", 0, 0));
+    }
 
+    @Test
+    public void itemQualityShouldNeverBeUnderZeroEvenSellInisnegative() {
+        Item testItem = new Item("Chievre", 0, 0);
+        GildedRose mainGilded = new GildedRose(new Item[]{testItem});
         mainGilded.updateQuality();
         assertThat(new Item[]{testItem}[0]).isEqualToComparingFieldByField(new Item("Chievre", -1, 0));
     }

@@ -4,6 +4,8 @@
     <list default="true" id="64af25ae-cddd-46b3-ad42-79c3f7ee7800" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/gildedrose/GildedRose.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gildedrose/GildedRose.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/gildedrose/TddGildedRose.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/gildedrose/TddGildedRose.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/gildedrose/GildedRose.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/gildedrose/GildedRose.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -36,12 +38,12 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="gitignore" value="5" />
-          <entry key="java" value="1385" />
+          <entry key="java" value="1509" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="1385" />
+          <entry key="JAVA" value="1509" />
           <entry key="PLAIN_TEXT" value="5" />
         </counts>
       </usages-collector>
@@ -49,20 +51,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/gildedrose/GildedRose.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="15" column="32" selection-start-line="15" selection-start-column="32" selection-end-line="15" selection-end-column="32" />
+            <state relative-caret-position="289">
+              <caret line="19" column="13" lean-forward="true" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/com/gildedrose/TddGildedRose.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="231">
-              <caret line="17" column="56" selection-start-line="17" selection-start-column="16" selection-end-line="17" selection-end-column="56" />
+            <state relative-caret-position="78">
+              <caret line="25" column="9" lean-forward="true" selection-start-line="25" selection-start-column="9" selection-end-line="25" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -114,8 +116,8 @@
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/src/test/java/com/gildedrose/TexttestFixture.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/gildedrose/Item.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/gildedrose/TddGildedRose.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/gildedrose/GildedRose.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/gildedrose/TddGildedRose.java" />
       </list>
     </option>
   </component>
@@ -194,7 +196,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1547033018233" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1547033230600" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
   </component>
@@ -210,7 +212,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.TddGildedRose.itemQualityShouldNeverBeUnderZero">
+  <component name="RunManager" selected="JUnit.TddGildedRose.itemQualityShouldNeverBeUnderZeroEvenSellInisnegative">
     <configuration name="TexttestFixture" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.gildedrose.TexttestFixture" />
       <module name="business-logic" />
@@ -256,6 +258,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="TddGildedRose.itemQualityShouldNeverBeUnderZeroEvenSellInisnegative" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="business-logic" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.gildedrose.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.gildedrose" />
+      <option name="MAIN_CLASS_NAME" value="com.gildedrose.TddGildedRose" />
+      <option name="METHOD_NAME" value="itemQualityShouldNeverBeUnderZeroEvenSellInisnegative" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="TddGildedRose.shouldDecreaseTwiceWhenSellInIsUnderZero" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="business-logic" />
       <extension name="coverage">
@@ -277,9 +295,11 @@
       <item itemvalue="JUnit.TddGildedRose.QualityShouldDecreaseWhenSellInDecrease" />
       <item itemvalue="JUnit.TddGildedRose.shouldDecreaseTwiceWhenSellInIsUnderZero" />
       <item itemvalue="JUnit.TddGildedRose.itemQualityShouldNeverBeUnderZero" />
+      <item itemvalue="JUnit.TddGildedRose.itemQualityShouldNeverBeUnderZeroEvenSellInisnegative" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.TddGildedRose.itemQualityShouldNeverBeUnderZeroEvenSellInisnegative" />
         <item itemvalue="JUnit.TddGildedRose.itemQualityShouldNeverBeUnderZero" />
         <item itemvalue="JUnit.TddGildedRose.shouldDecreaseTwiceWhenSellInIsUnderZero" />
         <item itemvalue="JUnit.TddGildedRose.QualityShouldDecreaseWhenSellInDecrease" />
@@ -297,14 +317,11 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1547025537398</updated>
-      <workItem from="1547025539055" duration="5699000" />
+      <workItem from="1547025539055" duration="6139000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="TddGildedRose_QualityShouldDecreaseWhenSellInDecrease - 2019.01.09 at 12h 09m 42s.xml">
-      <configuration name="TddGildedRose.QualityShouldDecreaseWhenSellInDecrease" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="TddGildedRose_QualityShouldDecreaseWhenSellInDecrease - 2019.01.09 at 12h 12m 17s.xml">
       <configuration name="TddGildedRose.QualityShouldDecreaseWhenSellInDecrease" configurationId="JUnit" />
     </history-entry>
@@ -314,9 +331,30 @@
     <history-entry file="TddGildedRose_shouldDecreaseTwiceWhenSellInIsUnderZero - 2019.01.09 at 12h 18m 38s.xml">
       <configuration name="TddGildedRose.shouldDecreaseTwiceWhenSellInIsUnderZero" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="TddGildedRose_shouldDecreaseTwiceWhenSellInIsUnderZero - 2019.01.09 at 12h 19m 50s.xml">
+      <configuration name="TddGildedRose.shouldDecreaseTwiceWhenSellInIsUnderZero" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TddGildedRose_shouldDecreaseTwiceWhenSellInIsUnderZero - 2019.01.09 at 12h 22m 06s.xml">
+      <configuration name="TddGildedRose.shouldDecreaseTwiceWhenSellInIsUnderZero" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TddGildedRose_itemQualityShouldNeverBeUnderZero - 2019.01.09 at 12h 22m 16s.xml">
+      <configuration name="TddGildedRose.itemQualityShouldNeverBeUnderZero" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TddGildedRose_itemQualityShouldNeverBeUnderZero - 2019.01.09 at 12h 23m 42s.xml">
+      <configuration name="TddGildedRose.itemQualityShouldNeverBeUnderZero" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TddGildedRose_itemQualityShouldNeverBeUnderZero - 2019.01.09 at 12h 25m 21s.xml">
+      <configuration name="TddGildedRose.itemQualityShouldNeverBeUnderZero" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TddGildedRose_itemQualityShouldNeverBeUnderZero - 2019.01.09 at 12h 27m 06s.xml">
+      <configuration name="TddGildedRose.itemQualityShouldNeverBeUnderZero" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TddGildedRose_itemQualityShouldNeverBeUnderZeroEvenSellInisnegative - 2019.01.09 at 12h 27m 09s.xml">
+      <configuration name="TddGildedRose.itemQualityShouldNeverBeUnderZeroEvenSellInisnegative" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5699000" />
+    <option name="totallyTimeSpent" value="6139000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="878" extended-state="6" />
@@ -408,20 +446,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/gildedrose/TddGildedRose.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/gildedrose/GildedRose.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="17" column="56" selection-start-line="17" selection-start-column="16" selection-end-line="17" selection-end-column="56" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="289">
+          <caret line="19" column="13" lean-forward="true" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/gildedrose/GildedRose.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/gildedrose/TddGildedRose.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="15" column="32" selection-start-line="15" selection-start-column="32" selection-end-line="15" selection-end-column="32" />
+        <state relative-caret-position="78">
+          <caret line="25" column="9" lean-forward="true" selection-start-line="25" selection-start-column="9" selection-end-line="25" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
