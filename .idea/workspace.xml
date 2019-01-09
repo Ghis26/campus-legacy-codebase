@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="64af25ae-cddd-46b3-ad42-79c3f7ee7800" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gildedrose/GildedRose.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gildedrose/GildedRose.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/gildedrose/TddGildedRose.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/gildedrose/TddGildedRose.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -35,12 +35,12 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="gitignore" value="5" />
-          <entry key="java" value="1935" />
+          <entry key="java" value="1993" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="1935" />
+          <entry key="JAVA" value="1993" />
           <entry key="PLAIN_TEXT" value="5" />
         </counts>
       </usages-collector>
@@ -48,7 +48,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/gildedrose/GildedRose.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="237">
@@ -63,11 +63,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/com/gildedrose/TddGildedRose.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="424">
-              <caret line="77" column="32" selection-start-line="77" selection-start-column="32" selection-end-line="77" selection-end-column="32" />
+            <state relative-caret-position="373">
+              <caret line="86" column="33" selection-start-line="86" selection-start-column="33" selection-end-line="86" selection-end-column="33" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -119,8 +119,8 @@
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/src/test/java/com/gildedrose/TexttestFixture.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/gildedrose/Item.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/gildedrose/TddGildedRose.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/gildedrose/GildedRose.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/gildedrose/TddGildedRose.java" />
       </list>
     </option>
   </component>
@@ -199,7 +199,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1547037932522" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1547038025134" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
   </component>
@@ -321,14 +321,11 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1547025537398</updated>
-      <workItem from="1547025539055" duration="7896000" />
+      <workItem from="1547025539055" duration="7959000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="TddGildedRose - 2019.01.09 at 12h 30m 51s.xml">
-      <configuration name="TddGildedRose" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="TddGildedRose - 2019.01.09 at 12h 31m 27s.xml">
       <configuration name="TddGildedRose" configurationId="JUnit" />
     </history-entry>
@@ -356,9 +353,12 @@
     <history-entry file="TddGildedRose - 2019.01.09 at 13h 44m 55s.xml">
       <configuration name="TddGildedRose" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="TddGildedRose - 2019.01.09 at 13h 45m 34s.xml">
+      <configuration name="TddGildedRose" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7896000" />
+    <option name="totallyTimeSpent" value="7959000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="878" extended-state="6" />
@@ -450,16 +450,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/gildedrose/TddGildedRose.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="424">
-          <caret line="77" column="32" selection-start-line="77" selection-start-column="32" selection-end-line="77" selection-end-column="32" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/gildedrose/GildedRose.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="237">
@@ -469,6 +459,16 @@
             <element signature="e#768#769#0" expanded="true" />
             <element signature="e#835#836#0" expanded="true" />
             <element signature="e#855#856#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/gildedrose/TddGildedRose.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="373">
+          <caret line="86" column="33" selection-start-line="86" selection-start-column="33" selection-end-line="86" selection-end-column="33" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>

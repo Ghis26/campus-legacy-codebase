@@ -78,4 +78,15 @@ public class TddGildedRose {
         mainGilded.increaseQuality(testItem);
         assertThat(new Item[]{testItem}[0].quality).isEqualTo(3);
     }
+
+
+    @Test
+    public void gildedRoseShouldAcceptNewRefacoredMethod() {
+        Item testItem = new Item("Aged Brie", 1, 2);
+        GildedRose mainGilded = new GildedRose(new Item[]{testItem});
+        mainGilded.updateQuality();
+        assertThat(new Item[]{testItem}[0].quality).isEqualTo(5);
+    }
+
+
 }
