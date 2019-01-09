@@ -7,7 +7,7 @@ public class GildedRose {
     Item[] items;
     private static final Logger logger = LoggerFactory.getLogger(GildedRose.class);
 
-    GildedRose(Item[] items) {
+    public GildedRose(Item[] items) {
         this.items = items;
     }
 
@@ -16,7 +16,7 @@ public class GildedRose {
      * foreach item will check if is legendary, cheesy, a pass or conjured
      * for item.category : update'Category'
      */
-    void updateQuality() {
+    public void updateQuality() {
         for (Item item : items) {
             logger.info("ITEM :: " + item.toString());
             chooseWhatToDo(item);

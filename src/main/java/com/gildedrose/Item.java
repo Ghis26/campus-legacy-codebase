@@ -3,9 +3,9 @@ package com.gildedrose;
 
 public class Item {
 
-    String name;
-    int sellIn;
-    int quality;
+    public String name;
+    public int sellIn;
+    public int quality;
 
     /**
      * constructor
@@ -26,7 +26,7 @@ public class Item {
      *
      * @return boolean
      */
-    boolean isConjured() {
+   public  boolean isConjured() {
         return this.name.startsWith("Conjured");
     }
 
@@ -36,7 +36,7 @@ public class Item {
      *
      * @return boolean
      */
-    boolean isLegendary() {
+    public boolean isLegendary() {
         return this.name.equals("Sulfuras, Hand of Ragnaros");
     }
 
@@ -46,7 +46,7 @@ public class Item {
      *
      * @return boolean
      */
-    boolean isAPass() {
+    public boolean isAPass() {
         return this.name.startsWith("Backstage passes");
     }
 
@@ -56,7 +56,7 @@ public class Item {
      *
      * @return boolean
      */
-    boolean isCheese() {
+    public boolean isCheese() {
         return this.name.equals("Aged Brie");
     }
 
@@ -66,11 +66,11 @@ public class Item {
      *
      * @return boolean
      */
-    boolean isAgingRedWine() {
+    public boolean isAgingRedWine() {
         return this.name.equals("Aging Red Wine");
     }
 
-    boolean isToOld() {
+    public boolean isToOld() {
     return this.sellIn < -100;
     }
 
@@ -80,7 +80,7 @@ public class Item {
      *
      * @return
      */
-    boolean isSoldOut() {
+    public boolean isSoldOut() {
         return this.sellIn < 0;
     }
 
