@@ -34,6 +34,8 @@ public class GildedRose {
     }
 
     public void increaseQuality(Item item) {
-        item.quality ++;
+        if(item.quality<50) {
+            item.quality++;
+        }
     }
 }
