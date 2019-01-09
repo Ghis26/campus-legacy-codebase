@@ -44,10 +44,9 @@ public class GildedRose {
     }
 
     private void updateWineQuality(Item item) {
-        if(item.sellIn< -100){
+        if (item.sellIn < -100) {
             decreaseQuality(item);
-        }
-        else if(item.sellIn<0){
+        } else if (isSoldOut(item)) {
             increaseQuality(item);
         }
     }
@@ -55,7 +54,7 @@ public class GildedRose {
     private void updateConjured(Item item) {
         decreaseQuality(item);
         decreaseQuality(item);
-        if(isSoldOut(item)) {
+        if (isSoldOut(item)) {
             decreaseQuality(item);
             decreaseQuality(item);
         }
@@ -80,7 +79,7 @@ public class GildedRose {
         if (item.sellIn <= 5) {
             increaseQuality(item);
         }
-        if (item.sellIn < 0) {
+        if (isSoldOut(item)) {
             item.quality = 0;
         }
     }
