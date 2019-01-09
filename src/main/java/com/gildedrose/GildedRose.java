@@ -21,9 +21,9 @@ public class GildedRose {
                 }
             }
             else{
-                item.quality++;
+                increaseQuality(item);
                 if(item.sellIn<0){
-                    item.quality++;
+                    increaseQuality(item);
                 }
             }
         }
@@ -33,7 +33,7 @@ public class GildedRose {
             item.quality--;
     }
 
-    public void increaseQuality(Item testItem) {
-        
+    public void increaseQuality(Item item) {
+        item.quality ++;
     }
 }
