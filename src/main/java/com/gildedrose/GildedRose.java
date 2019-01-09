@@ -4,6 +4,8 @@ public class GildedRose {
     public static final String SULFURAS = "Sulfuras, Hand of Ragnaros";
     public static final String BRIE = "Aged Brie";
     public static final String PASSES = "Backstage passes to a TAFKAL80ETC concert";
+    public static final String CONJURED = "Conjured Mana Cake";
+
     Item[] items;
 
     public GildedRose(Item[] items) {
@@ -24,12 +26,21 @@ public class GildedRose {
                     decreaseSellIn(item);
                     updateBackstagePasses(item);
                     break;
+                case CONJURED:
+                    decreaseSellIn(item);
+                    updateConjured(item);
+                    break;
                 default:
                     decreaseSellIn(item);
                     updateNormal(item);
                     break;
             }
         }
+    }
+
+    private void updateConjured(Item item) {
+        decreaseQuality(item);
+        decreaseQuality(item);
     }
 
     private int decreaseSellIn(Item item) {

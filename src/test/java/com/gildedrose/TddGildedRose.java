@@ -135,4 +135,20 @@ public class TddGildedRose {
         mainGilded.updateQuality();
         assertThat(new Item[]{testItem}[0]).isEqualToComparingFieldByField(new Item("Backstage passes to a TAFKAL80ETC concert", -1, 0));
     }
+
+    @Test
+    public void itemNameShouldStartByConjured() {
+        Item testItem = new Item("Conjured Mana Cake", 0, 48);
+        GildedRose mainGilded = new GildedRose(new Item[]{testItem});
+        mainGilded.updateQuality();
+        assertThat(new Item[]{testItem}[0].name).isEqualTo("Conjured Mana Cake");
+    }
+
+    @Test
+    public void itemConjuredQualityShouldDecreaseTwice() {
+        Item testItem = new Item("Conjured Mana Cake", 3, 14);
+        GildedRose mainGilded = new GildedRose(new Item[]{testItem});
+        mainGilded.updateQuality();
+        assertThat(new Item[]{testItem}[0]).isEqualToComparingFieldByField(new Item("Conjured Mana Cake", 2, 12));
+    }
 }
