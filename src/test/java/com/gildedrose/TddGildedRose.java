@@ -88,5 +88,13 @@ public class TddGildedRose {
         assertThat(new Item[]{testItem}[0].quality).isEqualTo(3);
     }
 
+    @Test
+    public void itemQualityShouldNeverBeMoreThan50() {
+        Item testItem = new Item("Aged Brie", 1, 50);
+        GildedRose mainGilded = new GildedRose(new Item[]{testItem});
+        mainGilded.updateQuality();
+        assertThat(new Item[]{testItem}[0].quality).isEqualTo(50);
+    }
+
 
 }
