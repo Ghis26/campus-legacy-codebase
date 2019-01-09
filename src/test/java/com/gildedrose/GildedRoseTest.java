@@ -6,26 +6,50 @@ import org.junit.jupiter.api.Test;
 
 class GildedRoseTest {
 
+//    @Test
+//    void VerifyIfQualityIsRight() {
+//        Item[] items = new Item[] { new Item("foo", -2, 11) };
+//        GildedRose app = new GildedRose(items);
+//        app.updateQuality();
+//        assertThat(app.items[0].quality).isEqualTo(9);
+//    }
+//    @Test
+//    void VerifyIfQualityOfConjuredItemIsRight() {
+//        Item[] items = new Item[] { new Item("Conjured foo", 2, 11) };
+//        GildedRose app = new GildedRose(items);
+//        app.updateQuality();
+//        assertThat(app.items[0].quality).isEqualTo(9);
+//    }
+//
+//    @Test
+//    void VerifyIfQualityOfAgedBrieIsRight() {
+//        Item[] items = new Item[] { new Item("Aged Brie", -2, 11) };
+//        GildedRose app = new GildedRose(items);
+//        app.updateQuality();
+//        assertThat(app.items[0].quality).isEqualTo(13);
+//    }
+
     @Test
-    void VerifyIfQualityIsRight() {
-        Item[] items = new Item[] { new Item("foo", -2, 11) };
+    void VerifyIfQualityOfWineIsRightWhenSellInPositive() {
+        Item[] items = new Item[] { new Item("Aging Red Wine", 3, 10) };
         GildedRose app = new GildedRose(items);
         app.updateQuality();
-        assertThat(app.items[0].quality).isEqualTo(9);
-    }
-    @Test
-    void VerifyIfQualityOfConjuredItemIsRight() {
-        Item[] items = new Item[] { new Item("Conjured foo", 2, 11) };
-        GildedRose app = new GildedRose(items);
-        app.updateQuality();
-        assertThat(app.items[0].quality).isEqualTo(9);
+        assertThat(app.items[0].quality).isEqualTo(10);
     }
 
     @Test
-    void VerifyIfQualityOfAgedBrieIsRight() {
-        Item[] items = new Item[] { new Item("Aged Brie", -2, 11) };
+    void VerifyIfQualityOfWineIsRightWhenUnderZero() {
+        Item[] items = new Item[] { new Item("Aging Red Wine", -35, 10) };
         GildedRose app = new GildedRose(items);
         app.updateQuality();
-        assertThat(app.items[0].quality).isEqualTo(13);
+        assertThat(app.items[0].quality).isEqualTo(11);
+    }
+
+    @Test
+    void VerifyIfQualityOfWineIsRightWhenUnderHundred() {
+        Item[] items = new Item[] { new Item("Aging Red Wine", -102, 10) };
+        GildedRose app = new GildedRose(items);
+        app.updateQuality();
+        assertThat(app.items[0].quality).isEqualTo(9);
     }
 }

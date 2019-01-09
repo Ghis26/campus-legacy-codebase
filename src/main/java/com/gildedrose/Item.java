@@ -61,6 +61,15 @@ public class Item {
     }
 
     /**
+     * isAgingRedWine ?
+     * if name equals "Aging red wine", return true
+     *
+     * @return boolean
+     */
+    boolean isAgingRedWine() { return this.name.equals("Aging Red Wine");
+    }
+
+    /**
      * isSoldOut ?
      * if sellIn in less than 0, return true
      *

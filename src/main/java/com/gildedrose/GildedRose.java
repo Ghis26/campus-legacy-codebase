@@ -33,6 +33,7 @@ public class GildedRose {
         else if (item.isAPass()) updatePass(item);
         else if (item.isConjured()) updateConjured(item);
         else if (item.isLegendary()) updateLegendary(item);
+        else if (item.isAgingRedWine()) updateWine(item);
         else updateOther(item);
     }
 
@@ -100,6 +101,23 @@ public class GildedRose {
 
         decreaseQuality(item);
         if (item.isSoldOut()) decreaseQuality(item);
+    }
+
+    /**
+     * Update quality of wine
+     * @param item
+     * If sellin is positive, quality doesn't change
+     * If sellin < 0, quality incremented by 1
+     * If sellin < -100 quality decremented by 1
+     */
+    private void updateWine(Item item) {
+
+        if (item.sellIn < -100) {
+            decreaseQuality(item);
+        }
+        if (item.sellIn < 0) {
+            increaseQuality(item);
+        }
     }
 
     /**
