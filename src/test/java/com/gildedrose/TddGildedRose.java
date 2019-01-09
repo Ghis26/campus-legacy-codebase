@@ -62,4 +62,12 @@ public class TddGildedRose {
         mainGilded.updateQuality();
         assertThat(new Item[]{testItem}[0].quality).isEqualTo(2);
     }
+
+    @Test
+    public void shouldTestDecreaseQualityMethod() {
+        Item testItem = new Item("Aged Brie", 1, 2);
+        GildedRose mainGilded = new GildedRose(new Item[]{testItem});
+        mainGilded.decreaseQuality(testItem);
+        assertThat(new Item[]{testItem}[0].quality).isEqualTo(1);
+    }
 }
