@@ -1,6 +1,9 @@
 package com.gildedrose;
 
 public class GildedRose {
+    public static final String SULFURAS = "Sulfuras, Hand of Ragnaros";
+    public static final String BRIE = "Aged Brie";
+    public static final String PASSES = "Backstage passes to a TAFKAL80ETC concert";
     Item[] items;
 
     public GildedRose(Item[] items) {
@@ -11,13 +14,13 @@ public class GildedRose {
     public void updateQuality() {
         for (Item item : items) {
             switch (item.name) {
-                case "Sulfuras":
+                case SULFURAS:
                     break;
-                case "Aged Brie":
+                case BRIE:
                     decreaseSellIn(item);
                     updateAgedBrie(item);
                     break;
-                case "Backstage passes":
+                case PASSES:
                     decreaseSellIn(item);
                     updateBackstagePasses(item);
                     break;

@@ -98,33 +98,33 @@ public class TddGildedRose {
 
     @Test
     public void itemNamedSulfurasQualityAndSellInNeverMove() {
-        Item testItem = new Item("Sulfuras", 0, 80);
+        Item testItem = new Item("Sulfuras, Hand of Ragnaros", 0, 80);
         GildedRose mainGilded = new GildedRose(new Item[]{testItem});
         mainGilded.updateQuality();
-        assertThat(new Item[]{testItem}[0]).isEqualToComparingFieldByField(new Item("Sulfuras", 0, 80));
+        assertThat(new Item[]{testItem}[0]).isEqualToComparingFieldByField(new Item("Sulfuras, Hand of Ragnaros", 0, 80));
     }
 
     @Test
     public void backstageQualityShouldIncrease() {
-        Item testItem = new Item("Backstage passes", 12, 2);
+        Item testItem = new Item("Backstage passes to a TAFKAL80ETC concert", 12, 2);
         GildedRose mainGilded = new GildedRose(new Item[]{testItem});
         mainGilded.updateQuality();
-        assertThat(new Item[]{testItem}[0]).isEqualToComparingFieldByField(new Item("Backstage passes", 11, 3));
+        assertThat(new Item[]{testItem}[0]).isEqualToComparingFieldByField(new Item("Backstage passes to a TAFKAL80ETC concert", 11, 3));
     }
 
     @Test
     public void backstageQualityShouldIncreaseByTwoWhenSellInIsUnderEleven() {
-        Item testItem = new Item("Backstage passes", 9, 2);
+        Item testItem = new Item("Backstage passes to a TAFKAL80ETC concert", 9, 2);
         GildedRose mainGilded = new GildedRose(new Item[]{testItem});
         mainGilded.updateQuality();
-        assertThat(new Item[]{testItem}[0]).isEqualToComparingFieldByField(new Item("Backstage passes", 8, 4));
+        assertThat(new Item[]{testItem}[0]).isEqualToComparingFieldByField(new Item("Backstage passes to a TAFKAL80ETC concert", 8, 4));
     }
 
     @Test
     public void backstageQualityShouldIncreaseByTwoWhenSellInIsUnderSix() {
-        Item testItem = new Item("Backstage passes", 5, 2);
+        Item testItem = new Item("Backstage passes to a TAFKAL80ETC concert", 5, 2);
         GildedRose mainGilded = new GildedRose(new Item[]{testItem});
         mainGilded.updateQuality();
-        assertThat(new Item[]{testItem}[0]).isEqualToComparingFieldByField(new Item("Backstage passes", 4, 5));
+        assertThat(new Item[]{testItem}[0]).isEqualToComparingFieldByField(new Item("Backstage passes to a TAFKAL80ETC concert", 4, 5));
     }
 }
