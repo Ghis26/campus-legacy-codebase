@@ -48,6 +48,14 @@ public class TddGildedRose {
     }
 
     @Test
+    public void AgedBrieShouldGrow() {
+        Item testItem = new Item("Aged Brie", 1, 0);
+        GildedRose mainGilded = new GildedRose(new Item[]{testItem});
+        mainGilded.updateQuality();
+        assertThat(new Item[]{testItem}[0].quality).isEqualTo(1);
+    }
+
+    @Test
     public void AgedBrieShouldGrowTwiceWhenSellInIsAtZero() {
         Item testItem = new Item("Aged Brie", -1, 0);
         GildedRose mainGilded = new GildedRose(new Item[]{testItem});
