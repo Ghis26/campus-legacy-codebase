@@ -50,7 +50,9 @@ public class GildedRose {
         }
         if (item.sellIn <= 5) {
             increaseQuality(item);
-
+        }
+        if (item.sellIn < 0) {
+            item.quality = 0;
         }
     }
 
@@ -59,21 +61,20 @@ public class GildedRose {
         if (isSoldOut(item)) {
             increaseQuality(item);
         }
-
     }
 
     private boolean isSoldOut(Item item) {
         return item.sellIn < 0;
     }
 
-    public void decreaseQuality(Item item) {
+    void decreaseQuality(Item item) {
         item.quality--;
         if (item.quality < 0) {
             item.quality = 0;
         }
     }
 
-    public void increaseQuality(Item item) {
+    void increaseQuality(Item item) {
         if (item.quality < 50) {
             item.quality++;
         }

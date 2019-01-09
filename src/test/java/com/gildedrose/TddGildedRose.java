@@ -127,4 +127,12 @@ public class TddGildedRose {
         mainGilded.updateQuality();
         assertThat(new Item[]{testItem}[0]).isEqualToComparingFieldByField(new Item("Backstage passes to a TAFKAL80ETC concert", 4, 5));
     }
+
+    @Test
+    public void backstageQualityShouldBeZeroWhenSoldOut() {
+        Item testItem = new Item("Backstage passes to a TAFKAL80ETC concert", 0, 48);
+        GildedRose mainGilded = new GildedRose(new Item[]{testItem});
+        mainGilded.updateQuality();
+        assertThat(new Item[]{testItem}[0]).isEqualToComparingFieldByField(new Item("Backstage passes to a TAFKAL80ETC concert", -1, 0));
+    }
 }
