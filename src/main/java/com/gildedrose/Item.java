@@ -71,7 +71,7 @@ public class Item {
     }
 
     boolean isToOld() {
-        return this.sellIn < -100;
+    return this.sellIn < -100;
     }
 
     /**
