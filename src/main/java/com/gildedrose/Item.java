@@ -19,4 +19,18 @@ public class Item {
         this.sellIn = sellIn;
         this.quality = quality;
     }
+
+    static void decreaseQuality(Item item) {
+        item.quality = Math.max(0, item.quality - 1);
+    }
+
+    static void increaseQuality(Item item) {
+        if (item.quality < 50) {
+            item.quality++;
+        }
+    }
+
+    static void frickYou(Item item) {
+        System.out.println("F*ck You, damn " + item.name);
+    }
 }

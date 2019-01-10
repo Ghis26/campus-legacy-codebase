@@ -83,7 +83,7 @@ public class TddGildedRose {
     public void shouldTestDecreaseQualityMethod() {
         Item testItem = new Item("Aged Brie", 1, 2);
         GildedRose mainGilded = new GildedRose(new Item[]{testItem});
-        mainGilded.decreaseQuality(testItem);
+        Item.decreaseQuality(testItem);
         assertThat(new Item[]{testItem}[0].quality).isEqualTo(1);
     }
 
@@ -91,7 +91,7 @@ public class TddGildedRose {
     public void shouldTestIncreaseQualityMethod() {
         Item testItem = new Item("Aged Brie", 1, 2);
         GildedRose mainGilded = new GildedRose(new Item[]{testItem});
-        mainGilded.increaseQuality(testItem);
+        Item.increaseQuality(testItem);
         assertThat(new Item[]{testItem}[0].quality).isEqualTo(3);
     }
 

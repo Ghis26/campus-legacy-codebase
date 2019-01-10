@@ -38,7 +38,7 @@ public class Rules {
         selectRule(item).apply(item);
     }
 
-    private Rule selectRule(Item item) {
+    private Rule selectRule(Item item){
         for (Rule rule : rules){
           if (rule.range.contains(item.sellIn)) {
               return rule;
