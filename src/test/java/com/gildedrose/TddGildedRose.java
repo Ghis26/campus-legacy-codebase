@@ -4,10 +4,10 @@ import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class TddGildedRose {
+class TddGildedRose {
 
     @Test
-    public void QualityShouldDecreaseWhenSellInDecrease() {
+    void QualityShouldDecreaseWhenSellInDecrease() {
         Item testItem = new Item("Chievre", 1, 1);
         GildedRose mainGilded = new GildedRose(new Item[]{testItem});
         mainGilded.updateQuality();
@@ -15,7 +15,7 @@ public class TddGildedRose {
     }
 
     @Test
-    public void shouldDecreaseTwiceWhenSellInIsUnderZero() {
+    void shouldDecreaseTwiceWhenSellInIsUnderZero() {
         Item testItem = new Item("Chievre", -5, 2);
         GildedRose mainGilded = new GildedRose(new Item[]{testItem});
         mainGilded.updateQuality();
@@ -23,7 +23,7 @@ public class TddGildedRose {
     }
 
     @Test
-    public void shouldResetToZeroWhenQualityIsUnderZero() {
+    void shouldResetToZeroWhenQualityIsUnderZero() {
         Item testItem = new Item("Chievre", 3, -1);
         GildedRose mainGilded = new GildedRose(new Item[]{testItem});
         mainGilded.updateQuality();
@@ -32,7 +32,7 @@ public class TddGildedRose {
     }
 
     @Test
-    public void itemQualityShouldNeverBeUnderZero() {
+    void itemQualityShouldNeverBeUnderZero() {
         Item testItem = new Item("Chievre", 1, 0);
         GildedRose mainGilded = new GildedRose(new Item[]{testItem});
         mainGilded.updateQuality();
@@ -40,7 +40,7 @@ public class TddGildedRose {
     }
 
     @Test
-    public void itemQualityDecrease() {
+    void itemQualityDecrease() {
         Item testItem = new Item("Chievre", 1, 1);
         GildedRose mainGilded = new GildedRose(new Item[]{testItem});
         mainGilded.updateQuality();
@@ -48,7 +48,7 @@ public class TddGildedRose {
     }
 
     @Test
-    public void itemQualityShouldNeverBeUnderZeroEvenSellInisnegative() {
+    void itemQualityShouldNeverBeUnderZeroEvenSellInisnegative() {
         Item testItem = new Item("Chievre", 0, 0);
         GildedRose mainGilded = new GildedRose(new Item[]{testItem});
         mainGilded.updateQuality();
@@ -56,7 +56,7 @@ public class TddGildedRose {
     }
 
     @Test
-    public void itemShouldNamedAgedBrie() {
+    void itemShouldNamedAgedBrie() {
         Item testItem = new Item("Aged Brie", 0, 0);
         GildedRose mainGilded = new GildedRose(new Item[]{testItem});
         mainGilded.updateQuality();
@@ -64,7 +64,7 @@ public class TddGildedRose {
     }
 
     @Test
-    public void AgedBrieShouldGrow() {
+    void AgedBrieShouldGrow() {
         Item testItem = new Item("Aged Brie", 1, 0);
         GildedRose mainGilded = new GildedRose(new Item[]{testItem});
         mainGilded.updateQuality();
@@ -72,7 +72,7 @@ public class TddGildedRose {
     }
 
     @Test
-    public void AgedBrieShouldGrowTwiceWhenSellInIsAtZero() {
+    void AgedBrieShouldGrowTwiceWhenSellInIsAtZero() {
         Item testItem = new Item("Aged Brie", -1, 0);
         GildedRose mainGilded = new GildedRose(new Item[]{testItem});
         mainGilded.updateQuality();
@@ -80,7 +80,7 @@ public class TddGildedRose {
     }
 
     @Test
-    public void shouldTestDecreaseQualityMethod() {
+    void shouldTestDecreaseQualityMethod() {
         Item testItem = new Item("Aged Brie", 1, 2);
         GildedRose mainGilded = new GildedRose(new Item[]{testItem});
         Item.decreaseQuality(testItem);
@@ -88,7 +88,7 @@ public class TddGildedRose {
     }
 
     @Test
-    public void shouldTestIncreaseQualityMethod() {
+    void shouldTestIncreaseQualityMethod() {
         Item testItem = new Item("Aged Brie", 1, 2);
         GildedRose mainGilded = new GildedRose(new Item[]{testItem});
         Item.increaseQuality(testItem);
@@ -97,7 +97,7 @@ public class TddGildedRose {
 
 
     @Test
-    public void gildedRoseShouldAcceptNewRefacoredMethod() {
+    void gildedRoseShouldAcceptNewRefacoredMethod() {
         Item testItem = new Item("Aged Brie", 1, 2);
         GildedRose mainGilded = new GildedRose(new Item[]{testItem});
         mainGilded.updateQuality();
@@ -105,7 +105,7 @@ public class TddGildedRose {
     }
 
     @Test
-    public void itemQualityShouldNeverBeMoreThan50() {
+    void itemQualityShouldNeverBeMoreThan50() {
         Item testItem = new Item("Aged Brie", 1, 50);
         GildedRose mainGilded = new GildedRose(new Item[]{testItem});
         mainGilded.updateQuality();
@@ -113,7 +113,7 @@ public class TddGildedRose {
     }
 
     @Test
-    public void itemNamedSulfurasQualityAndSellInNeverMove() {
+    void itemNamedSulfurasQualityAndSellInNeverMove() {
         Item testItem = new Item("Sulfuras, Hand of Ragnaros", 0, 80);
         GildedRose mainGilded = new GildedRose(new Item[]{testItem});
         mainGilded.updateQuality();
@@ -121,7 +121,7 @@ public class TddGildedRose {
     }
 
     @Test
-    public void backstageQualityShouldIncrease() {
+    void backstageQualityShouldIncrease() {
         Item testItem = new Item("Backstage passes to a TAFKAL80ETC concert", 12, 2);
         GildedRose mainGilded = new GildedRose(new Item[]{testItem});
         mainGilded.updateQuality();
@@ -129,7 +129,7 @@ public class TddGildedRose {
     }
 
     @Test
-    public void backstageQualityShouldIncreaseByTwoWhenSellInIsUnderEleven() {
+    void backstageQualityShouldIncreaseByTwoWhenSellInIsUnderEleven() {
         Item testItem = new Item("Backstage passes to a TAFKAL80ETC concert", 9, 2);
         GildedRose mainGilded = new GildedRose(new Item[]{testItem});
         mainGilded.updateQuality();
@@ -137,7 +137,7 @@ public class TddGildedRose {
     }
 
     @Test
-    public void backstageQualityShouldIncreaseByTwoWhenSellInIsEqualsToTen() {
+    void backstageQualityShouldIncreaseByTwoWhenSellInIsEqualsToTen() {
         Item testItem = new Item("Backstage passes to a TAFKAL80ETC concert", 11, 2);
         GildedRose mainGilded = new GildedRose(new Item[]{testItem});
         mainGilded.updateQuality();
@@ -145,7 +145,7 @@ public class TddGildedRose {
     }
 
     @Test
-    public void backstageQualityShouldIncreaseByTwoWhenSellInIsUnderSix() {
+    void backstageQualityShouldIncreaseByTwoWhenSellInIsUnderSix() {
         Item testItem = new Item("Backstage passes to a TAFKAL80ETC concert", 5, 2);
         GildedRose mainGilded = new GildedRose(new Item[]{testItem});
         mainGilded.updateQuality();
@@ -153,7 +153,7 @@ public class TddGildedRose {
     }
 
     @Test
-    public void backstageQualityShouldIncreaseByTwoWhenSellInIsEqualsToFive() {
+    void backstageQualityShouldIncreaseByTwoWhenSellInIsEqualsToFive() {
         Item testItem = new Item("Backstage passes to a TAFKAL80ETC concert", 6, 2);
         GildedRose mainGilded = new GildedRose(new Item[]{testItem});
         mainGilded.updateQuality();
@@ -161,7 +161,7 @@ public class TddGildedRose {
     }
 
     @Test
-    public void backstageQualityShouldBeZeroWhenSoldOut() {
+    void backstageQualityShouldBeZeroWhenSoldOut() {
         Item testItem = new Item("Backstage passes to a TAFKAL80ETC concert", 0, 48);
         GildedRose mainGilded = new GildedRose(new Item[]{testItem});
         mainGilded.updateQuality();
@@ -169,7 +169,7 @@ public class TddGildedRose {
     }
 
     @Test
-    public void itemNameShouldStartByConjured() {
+    void itemNameShouldStartByConjured() {
         Item testItem = new Item("Conjured Mana Cake", 0, 48);
         GildedRose mainGilded = new GildedRose(new Item[]{testItem});
         mainGilded.updateQuality();
@@ -177,7 +177,7 @@ public class TddGildedRose {
     }
 
     @Test
-    public void itemConjuredQualityShouldDecreaseTwice() {
+    void itemConjuredQualityShouldDecreaseTwice() {
         Item testItem = new Item("Conjured Mana Cake", 3, 14);
         GildedRose mainGilded = new GildedRose(new Item[]{testItem});
         mainGilded.updateQuality();
@@ -185,7 +185,7 @@ public class TddGildedRose {
     }
 
     @Test
-    public void itemConjuredQualityShouldDecreaseByFourWhenSellInIsUnderZero() {
+    void itemConjuredQualityShouldDecreaseByFourWhenSellInIsUnderZero() {
         Item testItem = new Item("Conjured Mana Cake", -2, 14);
         GildedRose mainGilded = new GildedRose(new Item[]{testItem});
         mainGilded.updateQuality();
@@ -193,7 +193,7 @@ public class TddGildedRose {
     }
 
     @Test
-    public void wineQualityShouldNotMoveWhenSellInPositive() {
+    void wineQualityShouldNotMoveWhenSellInPositive() {
         Item testItem = new Item("Aging Red Wine", 20, 10);
         GildedRose mainGilded = new GildedRose(new Item[]{testItem});
         mainGilded.updateQuality();
@@ -201,7 +201,7 @@ public class TddGildedRose {
     }
 
     @Test
-    public void wineQualityShouldIncreaseWhenSellInNegative() {
+    void wineQualityShouldIncreaseWhenSellInNegative() {
         Item testItem = new Item("Aging Red Wine", -20, 10);
         GildedRose mainGilded = new GildedRose(new Item[]{testItem});
         mainGilded.updateQuality();
@@ -209,7 +209,7 @@ public class TddGildedRose {
     }
 
     @Test
-    public void wineQualityShouldDecreaseWhenSellInIsUnderMinusHundred() {
+    void wineQualityShouldDecreaseWhenSellInIsUnderMinusHundred() {
         Item testItem = new Item("Aging Red Wine", -100, 10);
         GildedRose mainGilded = new GildedRose(new Item[]{testItem});
         mainGilded.updateQuality();
@@ -217,7 +217,7 @@ public class TddGildedRose {
     }
 
     @Test
-    public void wineQualityShouldIncreaseWhenSellInIsEqualsToHundred() {
+    void wineQualityShouldIncreaseWhenSellInIsEqualsToHundred() {
         Item testItem = new Item("Aging Red Wine", -99, 10);
         GildedRose mainGilded = new GildedRose(new Item[]{testItem});
         mainGilded.updateQuality();
@@ -225,7 +225,7 @@ public class TddGildedRose {
     }
 
     @Test
-    public void brieSellInShouldDecrease() {
+    void brieSellInShouldDecrease() {
         Item testItem = new Item("Aged Brie", -99, 10);
         GildedRose mainGilded = new GildedRose(new Item[]{testItem});
         mainGilded.updateQuality();
